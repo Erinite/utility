@@ -1,4 +1,4 @@
-(defproject utility "0.1.0-SNAPSHOT"
+(defproject erinite/utility "0.1.1-SNAPSHOT"
   :description "Swiss-army-knife of utility functions"
   :url "https://github.com/Erinite/utility"
   :license {:name "MIT"

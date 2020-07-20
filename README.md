@@ -1,10 +1,18 @@
 # utility
 A swiss-army-knife of utility functions
 
+Use with leiningen:
+
+```
+[erinite/utility "0.1.0"]
+```
+
 
 # Reference
 
 ## erinite.utility.xf
+
+Functions to create transformation functions for use with `map`, `update` etc.
 
 ```clojure
 (require '[erinite.utility.xf :as xf])
