@@ -10,14 +10,14 @@ A swiss-army-knife of utility functions
 (require '[erinite.utility.xf :as xf])
 ```
 
-### if
+### when
 
 `(fn [condition xform])`
 
 Returns a transformation function that applies `xform` to input if applying `condition` is truthy, otherwise returns input unchanged.
 
 ```clojure
-(map (xf/if int? inc) [0 1 :foo 3 true :bar])
+(map (xf/when int? inc) [0 1 :foo 3 true :bar])
 ```
 ⇒
 ```clojure
