@@ -4,7 +4,7 @@ A swiss-army-knife of utility functions
 Use with leiningen:
 
 ```
-[erinite/utility "0.1.0"]
+[erinite/utility "0.1.1"]
 ```
 
 
