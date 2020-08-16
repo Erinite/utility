@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+## 0.1.1 - 2020-08-16
+### Added
+ - [seqs/index-by](https://github.com/Erinite/utility#index-by)
 
 ## 0.1.0 - 2020-07-20
 ### Added
