@@ -10,6 +10,31 @@ Use with leiningen:
 
 # Reference
 
+## erinite.utility.seqs
+
+Functions to manipulate sequences
+
+```clojure
+(require '[erinite.utility.seqs :as seqs])
+```
+
+### index-by
+
+`(fn [f col])`
+
+Transform collection `col` into a map of collections keyed by the result of `f`. Like `group-by`, where each key maps to the last value instead of a vector of values.
+
+```clojure
+(seqs/index-by :id [{:id 1 :val "a"} {:id 2 :val "b"} {:id 3 :val "c"} {:id 1 :val "d"}])
+```
+⇒
+```clojure
+{2 {:id 2 :val "b"}
+ 3 {:id 3 :val "c"}
+ 1 {:id 1 :val "d"}}
+ 
+```
+
 ## erinite.utility.xf
 
 Functions to create transformation functions for use with `map`, `update` etc.
