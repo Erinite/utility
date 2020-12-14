@@ -40,3 +40,15 @@
   (fn [value]
     (core-when value (f value))))
 
+(defn finargs
+  "Replace an argument with a sub-part of that argument.
+   ((finargs f [1 :foo]) :A {:foo :B}) would call (f :A :B)"
+  [f path]
+  (fn [& args]
+    (let [args (vec args)]
+      (apply f (assoc args (first path) (get-in args path))))))
+
+(defn fapply
+  "Returns a function which applies its single argument to f"
+  [f]
+  #(apply f %))

@@ -31,3 +31,12 @@
            (map (xf/fsome inc)
                 [0 1 nil 3 nil])))))
 
+(deftest finargs-test
+  (testing "Replaces an argument with data from a sub-path of that argument"
+    (is (= [:a :B]
+           ((xf/finargs vector [1 :foo]) :a {:foo :B})))))
+
+(deftest fapply-test
+  (testing "Returns a funciton that applies its argument to the input function"
+    (is (= 10
+           ((xf/fapply +) [5 2 3])))))
