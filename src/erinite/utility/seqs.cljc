@@ -10,3 +10,9 @@
     (fn [ret x]
       (assoc! ret (f x) x))
     (transient {}) coll)))
+
+(defn vec-dissoc
+  "Remove elem in coll"
+  [coll pos]
+  (into (subvec coll 0 pos)
+        (subvec coll (inc pos))))

@@ -52,3 +52,17 @@
   "Returns a function which applies its single argument to f"
   [f]
   #(apply f %))
+
+(defn rot-args<<
+  "Rotate arguments of f to the left by one
+   ((rot-args<< f) 1 2 3) => (f 2 3 1)"
+  [f]
+  (fn [& args]
+    (apply f (conj (vec (rest args)) (first args)))))
+
+(defn rot-args>>
+  "Rotate arguments of f to the right by one
+     ((rot-args>> f) 1 2 3) => (f 3 1 2)"
+  [f]
+  (fn [& args]
+    (apply f (concat (list (last args)) (take (dec (count args)) args)))))

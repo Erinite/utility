@@ -40,3 +40,13 @@
   (testing "Returns a funciton that applies its argument to the input function"
     (is (= 10
            ((xf/fapply +) [5 2 3])))))
+
+(deftest rot-args>>-test
+  (testing "Rotate arguments to the right"
+    (is (= [3 1 2]
+           ((xf/rot-args>> vector) 1 2 3)))))
+
+(deftest rot-args<<-test
+  (testing "Rotate arguments to the left"
+    (is (= [2 3 1]
+           ((xf/rot-args<< vector) 1 2 3)))))
